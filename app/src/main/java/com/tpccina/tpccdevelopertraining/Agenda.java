@@ -21,4 +21,11 @@ public class Agenda extends AppCompatActivity {
             }
         });
     }
+
+    // adding slide in/out page transition when moving back from Agenda to TrainingDetails
+    @Override
+    protected void onPause() {
+        super.onPause();
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+    }
 }
