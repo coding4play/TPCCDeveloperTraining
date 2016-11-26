@@ -22,6 +22,7 @@ public class TrainingDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_training_details);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         tpccMap = (TextView) findViewById(R.id.tpcc_map);
         schedule = (TextView) findViewById(R.id.schedule);
@@ -64,6 +65,8 @@ public class TrainingDetails extends AppCompatActivity {
                 public void onClick(View view) {
                     Intent intent = new Intent(getApplicationContext(), Agenda.class);
                     startActivity(intent);
+                    // adding cross-fade effect page transition from TrainingDetails to Agenda
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 }
             });
         } catch (Exception e) {

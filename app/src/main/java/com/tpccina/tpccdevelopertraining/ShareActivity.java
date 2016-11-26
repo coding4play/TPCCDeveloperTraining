@@ -3,10 +3,8 @@ package com.tpccina.tpccdevelopertraining;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.NavUtils;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -14,7 +12,7 @@ import android.widget.Toolbar;
 
 /**
  * Provides the landing screen of this sample. There is nothing particularly interesting here. All
- * the codes related to the Direct Share feature are in {@link SampleChooserTargetService}.
+ * the codes related to the Direct Share feature are in .
  */
 public class ShareActivity extends Activity {
 
@@ -28,6 +26,8 @@ public class ShareActivity extends Activity {
         setContentView(R.layout.activity_share);
 
         setActionBar((Toolbar) findViewById(R.id.toolbar));
+        // add up button
+        getActionBar().setDisplayHomeAsUpEnabled(true);
         mEditBody = (EditText) findViewById(R.id.body);
         mShare = (ImageButton) findViewById(R.id.share);
         //findViewById(R.id.share).setOnClickListener(mOnClickListener);
